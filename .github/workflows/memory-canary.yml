@@ -1,0 +1,18 @@
+name: CEREBRON F115 MEMORY OMEGA canary
+on:
+  push:
+    paths: ["worker/memory_canary.py", ".github/workflows/memory-canary.yml"]
+  workflow_dispatch:
+jobs:
+  memory:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python worker/memory_canary.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: f115-memory-canary
+          path: artifacts/memory_record.json
+          retention-days: 1
