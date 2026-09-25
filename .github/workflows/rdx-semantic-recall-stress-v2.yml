@@ -1,0 +1,38 @@
+name: CEREBRON F115 RDX Semantic Recall Stress V2
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'config/rdx-semantic-recall-stress-v2-trigger.txt'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  semantic-stress:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install vector runtime
+        run: python -m pip install --quiet --no-cache-dir sentence-transformers huggingface_hub numpy
+      - name: Run fresh semantic stress holdout
+        run: python worker/rdx_semantic_recall_stress_v2.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: f115-rdx-semantic-recall-stress-v2
+          path: artifacts/rdx_semantic_recall_stress_v2.json
+          if-no-files-found: error
+      - name: Persist receipt
+        run: |
+          mkdir -p receipts
+          cp artifacts/rdx_semantic_recall_stress_v2.json receipts/rdx-semantic-recall-stress-v2-${{ github.run_id }}.json
+          git config user.name cerebron-bot
+          git config user.email actions@users.noreply.github.com
+          git add receipts/rdx-semantic-recall-stress-v2-${{ github.run_id }}.json
+          git diff --cached --quiet && exit 0
+          git commit -m "receipt: F115 semantic recall stress v2 ${{ github.run_id }}"
+          git pull --rebase origin main
+          git push
