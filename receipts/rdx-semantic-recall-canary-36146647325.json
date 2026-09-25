@@ -1,0 +1,35 @@
+{
+  "schema": "F115_RDX_SEMANTIC_RECALL_CANARY_V1",
+  "status": "PASS",
+  "farm_id": 115,
+  "role": "VECTOR_SEMANTIC",
+  "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+  "resolved_model_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "model_revision_recorded": true,
+  "training_executed": false,
+  "weights_changed": false,
+  "corpus_count": 12,
+  "query_count": 8,
+  "corpus_sha256": "7455d7c25ff38c690a6cd12c8d84c59c6f59d3d2f082632ad03d72b96a391282",
+  "queries_sha256": "165e5c52b1c22746d42ce5b277031c6f01445cd7b0d7b2a17d9cefdde514af73",
+  "top1_correct": 7,
+  "top1_accuracy": 0.875,
+  "mrr": 0.9375,
+  "threshold": {
+    "top1_accuracy_min": 0.75,
+    "mrr_min": 0.8
+  },
+  "rows": [
+    {"query_sha256":"448c077aa0ccc4a14e4e3f209c8e365de1d62442d43589333e5958520e65d3b9","target":"RDX-AI-CLAIM-001","top1":"RDX-AI-CLAIM-001","target_rank":1,"top1_correct":true,"top1_score":0.7334872484207153,"target_score":0.7334872484207153},
+    {"query_sha256":"caef436e5fed2bfe1d3a51f7ea2ba75347b4f18a61298f51c6f0b197531a2930","target":"RDX-AI-CLAIM-002","top1":"RDX-AI-CLAIM-002","target_rank":1,"top1_correct":true,"top1_score":0.5213892459869385,"target_score":0.5213892459869385},
+    {"query_sha256":"c65da90f39a258279d07ee0287ecbcee388a182343a5ce17e4a0c958deb23765","target":"RDX-ROBOT-CLAIM-001","top1":"RDX-ROBOT-CLAIM-001","target_rank":1,"top1_correct":true,"top1_score":0.5697048902511597,"target_score":0.5697048902511597},
+    {"query_sha256":"e1bc5555039b6be9c4ba23c1d8d014e0f70074f45acdfb2f0d099499930f8f9a","target":"RDX-MODEL-CLAIM-002","top1":"RDX-MODEL-CLAIM-001","target_rank":2,"top1_correct":false,"top1_score":0.5797511339187622,"target_score":0.5656431913375854},
+    {"query_sha256":"3cdf74049b990413fe3aaf0f829246a2f92a762d92211de2307cba3643264816","target":"RDX-MODEL-CLAIM-001","top1":"RDX-MODEL-CLAIM-001","target_rank":1,"top1_correct":true,"top1_score":0.5221151113510132,"target_score":0.5221151113510132},
+    {"query_sha256":"f34e051c43f98b48f2306889d58aa3c63df22e9d8ef38e725e615fc2bb5b5ee4","target":"RDX-EVID-CLAIM-001","top1":"RDX-EVID-CLAIM-001","target_rank":1,"top1_correct":true,"top1_score":0.5649080276489258,"target_score":0.5649080276489258},
+    {"query_sha256":"d6cf46223a72b7f888735251f793eb8847b88ae579e2ae8dde416dda4ae90ff4","target":"RDX-S01-CLAIM-001","top1":"RDX-S01-CLAIM-001","target_rank":1,"top1_correct":true,"top1_score":0.5711548328399658,"target_score":0.5711548328399658},
+    {"query_sha256":"d92ab22b653b42f86df4fb199674a0ffc9f13b831f751168cd8673438011135e","target":"RDX-ENERGY-CLAIM-002","top1":"RDX-ENERGY-CLAIM-002","target_rank":1,"top1_correct":true,"top1_score":0.6190546751022339,"target_score":0.6190546751022339}
+  ],
+  "elapsed_s": 4.755,
+  "claim_ceiling": "SYNTHETIC_RDX_SEMANTIC_RETRIEVAL_CANARY_ONLY_NOT_PRODUCTION_RAG_QUALITY",
+  "receipt_sha256": "0fd57ab740fb6cd928d86c68724626dbb4347f01ded9b641b2c6133492ae4778"
+}
