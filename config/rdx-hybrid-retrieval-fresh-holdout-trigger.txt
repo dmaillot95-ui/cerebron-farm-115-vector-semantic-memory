@@ -1,0 +1,7 @@
+F115 RDX HYBRID RETRIEVAL FRESH HOLDOUT V1
+policy_source_run=36150126260
+dense_weight=0.9
+lexical_weight=0.1
+holdout_source=stress_v2_24q
+policy_frozen=true
+training=false
