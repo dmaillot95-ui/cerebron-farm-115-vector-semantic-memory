@@ -34,5 +34,8 @@ jobs:
           git add receipts/rdx-semantic-recall-stress-v2-${{ github.run_id }}.json
           git diff --cached --quiet && exit 0
           git commit -m "receipt: F115 semantic recall stress v2 ${{ github.run_id }}"
-          git pull --rebase origin main
-          git push
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push && exit 0
+            sleep 5
+          done
+          exit 1
