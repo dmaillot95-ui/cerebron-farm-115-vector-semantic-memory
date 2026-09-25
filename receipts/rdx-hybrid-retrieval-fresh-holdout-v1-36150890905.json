@@ -1,0 +1,478 @@
+{
+  "schema": "F115_RDX_HYBRID_RETRIEVAL_FRESH_HOLDOUT_V1",
+  "status": "PASS",
+  "farm_id": 115,
+  "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+  "resolved_model_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "policy_source": {
+    "dev_run_id": 36150126260,
+    "dev_receipt_sha256": "a5b40f6e97bcb2c176778e1841d03dfb639bc9c2e952ebc172b7df2f10a6bc24"
+  },
+  "policy": {
+    "dense_weight": 0.9,
+    "lexical_weight": 0.1,
+    "frozen_before_holdout": true
+  },
+  "holdout_source": "RDX_SEMANTIC_RECALL_STRESS_V2_24_QUERY_FRESH_SET",
+  "holdout_query_count": 24,
+  "baseline_dense": {
+    "correct": 22,
+    "accuracy": 0.9166666666666666,
+    "top3_correct": 24,
+    "top3_recall": 1.0,
+    "mrr": 0.9583333333333334
+  },
+  "hybrid": {
+    "correct": 24,
+    "accuracy": 1.0,
+    "top3_correct": 24,
+    "top3_recall": 1.0,
+    "mrr": 1.0
+  },
+  "top1_gain_over_dense": 2,
+  "mrr_gain_over_dense": 0.04166666666666663,
+  "decision": "FRESH_HOLDOUT_GAIN",
+  "rows": {
+    "dense": [
+      {
+        "id": "Q01",
+        "target": "AI-RAG",
+        "top1": "AI-RAG",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "86c0dafde253ef106b009b79b613a1a31fd6be7920c1414f7149156dbf3e0d62"
+      },
+      {
+        "id": "Q02",
+        "target": "AI-M6",
+        "top1": "AI-M6",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "5267c2ab005e54265b098b62a8ba3799400c816d4d29d20e067e73b25d0b2e3f"
+      },
+      {
+        "id": "Q03",
+        "target": "AI-PROV",
+        "top1": "EVID-FAIL",
+        "target_rank": 2,
+        "top1_correct": false,
+        "top3_correct": true,
+        "query_sha256": "1c41ebaed2a77acc2da5265d04d5cabd6dbb8c15f29c68d6599040fa812d1055"
+      },
+      {
+        "id": "Q04",
+        "target": "AI-GOLD",
+        "top1": "AI-GOLD",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "5ccb22600887b30680d00879bcf7db5575e6b68128051362c743dc0d7dbfe3f6"
+      },
+      {
+        "id": "Q05",
+        "target": "AI-DEDUP",
+        "top1": "AI-DEDUP",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "255dc60f5af63264f99c8dbf5672b38e9df17a6d75bee737363b46c63b35d1b2"
+      },
+      {
+        "id": "Q06",
+        "target": "AI-MEMTRAIN",
+        "top1": "AI-MEMTRAIN",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "532e098358f38d0724ed0dc127a5a2f500f642c2259e729ae0d4e7c4ffc78343"
+      },
+      {
+        "id": "Q07",
+        "target": "SPACE-ASSEMBLY",
+        "top1": "SPACE-ASSEMBLY",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "5065d02d5159a354167d34bc778718f1b20261ea12a3135bbd5e8a5e141f11ff"
+      },
+      {
+        "id": "Q08",
+        "target": "SPACE-TUG",
+        "top1": "SPACE-TUG",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "5ba42170540c34d2a421bd8eefff9edb521854c7d93c7016c1018ce59d5181c1"
+      },
+      {
+        "id": "Q09",
+        "target": "SPACE-ANCHOR",
+        "top1": "SPACE-ANCHOR",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "4e5f29c1af7da990299c9e252605b45fd4a37552872fb96f9d63569a03759f32"
+      },
+      {
+        "id": "Q10",
+        "target": "SPACE-SENSE",
+        "top1": "SPACE-SENSE",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "5b428e674f35fcf37a7cc1a601b21f1b12a153ec7716a2bcba127be5ad956dbb"
+      },
+      {
+        "id": "Q11",
+        "target": "ENERGY-RT",
+        "top1": "ENERGY-RT",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "71d4e4dcf3e5bf86a66cfa130a285616556563ce35b1742c1fff13e4aa020506"
+      },
+      {
+        "id": "Q12",
+        "target": "ENERGY-THERMAL",
+        "top1": "ENERGY-THERMAL",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "e06dc6873873ec8baea3fe9c2f402128f6207dea032d8725d4b7d75d95738e36"
+      },
+      {
+        "id": "Q13",
+        "target": "SIM-REAL",
+        "top1": "SIM-REAL",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "29ce87a57d2c544278227f56b43ff9717dbf7e3f77fb35bd2a4e68e3cce923db"
+      },
+      {
+        "id": "Q14",
+        "target": "SIM-SENS",
+        "top1": "SIM-SENS",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "c7973cb47602a87e79d437a63ecfa176abf35f25081e1ab06b2cc5d044c80bb9"
+      },
+      {
+        "id": "Q15",
+        "target": "SIM-BC",
+        "top1": "SIM-BC",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "e7e5f9f5c626e032c864802b63c8d649d2134d07bdfec1464e5c9f1bb59ed3d2"
+      },
+      {
+        "id": "Q16",
+        "target": "EVID-INDEP",
+        "top1": "EVID-INDEP",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "00ba93986acbfaa826acf72f76bf3d81147d2cb0f300f1f0abadd2ab84176d82"
+      },
+      {
+        "id": "Q17",
+        "target": "EVID-FAIL",
+        "top1": "AI-PROV",
+        "target_rank": 2,
+        "top1_correct": false,
+        "top3_correct": true,
+        "query_sha256": "f66683ae94c65dbad7a9cdbff8c59de48b750122849ca079582691a8a47d8c72"
+      },
+      {
+        "id": "Q18",
+        "target": "EVID-CLAIM",
+        "top1": "EVID-CLAIM",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "ec2b8aaeaf3cfe7a6fd8f186103f5046cf1af3b2e7c0fb44773f3e301036655a"
+      },
+      {
+        "id": "Q19",
+        "target": "ROBOT-PLAN",
+        "top1": "ROBOT-PLAN",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "5877ac0f1e86803afc406519dd612d439924c458dbf078235ca27379dbfe2ab1"
+      },
+      {
+        "id": "Q20",
+        "target": "ROBOT-REPLAY",
+        "top1": "ROBOT-REPLAY",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "6eca77da2c948a84d4fcea9ccaf9102ba9572d5258dd6755b7a63a99358c1f55"
+      },
+      {
+        "id": "Q21",
+        "target": "DATA-RIGHTS",
+        "top1": "DATA-RIGHTS",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "08345c4a8c36431b12053d8516daf6becbda1d6d9d632b5d7e4f612bd0b5e900"
+      },
+      {
+        "id": "Q22",
+        "target": "DATA-SECRET",
+        "top1": "DATA-SECRET",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "a4797377466f435692b0d098dbb2c9f9eeaa20af37b285118145501728b5abcf"
+      },
+      {
+        "id": "Q23",
+        "target": "DATA-SHA",
+        "top1": "DATA-SHA",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "970204bd867aeb9242fbd520ea811db35eedb0a0db96b4cac668d5d460512332"
+      },
+      {
+        "id": "Q24",
+        "target": "DATA-FUSION",
+        "top1": "DATA-FUSION",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "00a9539885c2776bb6ae1796aed56e874c894048125ef5d97498f9192253a79c"
+      }
+    ],
+    "hybrid": [
+      {
+        "id": "Q01",
+        "target": "AI-RAG",
+        "top1": "AI-RAG",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "86c0dafde253ef106b009b79b613a1a31fd6be7920c1414f7149156dbf3e0d62"
+      },
+      {
+        "id": "Q02",
+        "target": "AI-M6",
+        "top1": "AI-M6",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "5267c2ab005e54265b098b62a8ba3799400c816d4d29d20e067e73b25d0b2e3f"
+      },
+      {
+        "id": "Q03",
+        "target": "AI-PROV",
+        "top1": "AI-PROV",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "1c41ebaed2a77acc2da5265d04d5cabd6dbb8c15f29c68d6599040fa812d1055"
+      },
+      {
+        "id": "Q04",
+        "target": "AI-GOLD",
+        "top1": "AI-GOLD",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "5ccb22600887b30680d00879bcf7db5575e6b68128051362c743dc0d7dbfe3f6"
+      },
+      {
+        "id": "Q05",
+        "target": "AI-DEDUP",
+        "top1": "AI-DEDUP",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "255dc60f5af63264f99c8dbf5672b38e9df17a6d75bee737363b46c63b35d1b2"
+      },
+      {
+        "id": "Q06",
+        "target": "AI-MEMTRAIN",
+        "top1": "AI-MEMTRAIN",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "532e098358f38d0724ed0dc127a5a2f500f642c2259e729ae0d4e7c4ffc78343"
+      },
+      {
+        "id": "Q07",
+        "target": "SPACE-ASSEMBLY",
+        "top1": "SPACE-ASSEMBLY",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "5065d02d5159a354167d34bc778718f1b20261ea12a3135bbd5e8a5e141f11ff"
+      },
+      {
+        "id": "Q08",
+        "target": "SPACE-TUG",
+        "top1": "SPACE-TUG",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "5ba42170540c34d2a421bd8eefff9edb521854c7d93c7016c1018ce59d5181c1"
+      },
+      {
+        "id": "Q09",
+        "target": "SPACE-ANCHOR",
+        "top1": "SPACE-ANCHOR",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "4e5f29c1af7da990299c9e252605b45fd4a37552872fb96f9d63569a03759f32"
+      },
+      {
+        "id": "Q10",
+        "target": "SPACE-SENSE",
+        "top1": "SPACE-SENSE",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "5b428e674f35fcf37a7cc1a601b21f1b12a153ec7716a2bcba127be5ad956dbb"
+      },
+      {
+        "id": "Q11",
+        "target": "ENERGY-RT",
+        "top1": "ENERGY-RT",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "71d4e4dcf3e5bf86a66cfa130a285616556563ce35b1742c1fff13e4aa020506"
+      },
+      {
+        "id": "Q12",
+        "target": "ENERGY-THERMAL",
+        "top1": "ENERGY-THERMAL",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "e06dc6873873ec8baea3fe9c2f402128f6207dea032d8725d4b7d75d95738e36"
+      },
+      {
+        "id": "Q13",
+        "target": "SIM-REAL",
+        "top1": "SIM-REAL",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "29ce87a57d2c544278227f56b43ff9717dbf7e3f77fb35bd2a4e68e3cce923db"
+      },
+      {
+        "id": "Q14",
+        "target": "SIM-SENS",
+        "top1": "SIM-SENS",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "c7973cb47602a87e79d437a63ecfa176abf35f25081e1ab06b2cc5d044c80bb9"
+      },
+      {
+        "id": "Q15",
+        "target": "SIM-BC",
+        "top1": "SIM-BC",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "e7e5f9f5c626e032c864802b63c8d649d2134d07bdfec1464e5c9f1bb59ed3d2"
+      },
+      {
+        "id": "Q16",
+        "target": "EVID-INDEP",
+        "top1": "EVID-INDEP",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "00ba93986acbfaa826acf72f76bf3d81147d2cb0f300f1f0abadd2ab84176d82"
+      },
+      {
+        "id": "Q17",
+        "target": "EVID-FAIL",
+        "top1": "EVID-FAIL",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "f66683ae94c65dbad7a9cdbff8c59de48b750122849ca079582691a8a47d8c72"
+      },
+      {
+        "id": "Q18",
+        "target": "EVID-CLAIM",
+        "top1": "EVID-CLAIM",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "ec2b8aaeaf3cfe7a6fd8f186103f5046cf1af3b2e7c0fb44773f3e301036655a"
+      },
+      {
+        "id": "Q19",
+        "target": "ROBOT-PLAN",
+        "top1": "ROBOT-PLAN",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "5877ac0f1e86803afc406519dd612d439924c458dbf078235ca27379dbfe2ab1"
+      },
+      {
+        "id": "Q20",
+        "target": "ROBOT-REPLAY",
+        "top1": "ROBOT-REPLAY",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "6eca77da2c948a84d4fcea9ccaf9102ba9572d5258dd6755b7a63a99358c1f55"
+      },
+      {
+        "id": "Q21",
+        "target": "DATA-RIGHTS",
+        "top1": "DATA-RIGHTS",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "08345c4a8c36431b12053d8516daf6becbda1d6d9d632b5d7e4f612bd0b5e900"
+      },
+      {
+        "id": "Q22",
+        "target": "DATA-SECRET",
+        "top1": "DATA-SECRET",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "a4797377466f435692b0d098dbb2c9f9eeaa20af37b285118145501728b5abcf"
+      },
+      {
+        "id": "Q23",
+        "target": "DATA-SHA",
+        "top1": "DATA-SHA",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "970204bd867aeb9242fbd520ea811db35eedb0a0db96b4cac668d5d460512332"
+      },
+      {
+        "id": "Q24",
+        "target": "DATA-FUSION",
+        "top1": "DATA-FUSION",
+        "target_rank": 1,
+        "top1_correct": true,
+        "top3_correct": true,
+        "query_sha256": "00a9539885c2776bb6ae1796aed56e874c894048125ef5d97498f9192253a79c"
+      }
+    ]
+  },
+  "training_executed": false,
+  "weights_changed": false,
+  "claim_ceiling": "FRESH_SYNTHETIC_HOLDOUT_RETRIEVAL_POLICY_EVIDENCE_ONLY_NOT_PRODUCTION_RAG_QUALITY",
+  "elapsed_s": 4.453,
+  "receipt_sha256": "2b6f1b2c63d193ecc3e6290270165dc5bd064f9cee4449563f618fafce562c62"
+}
