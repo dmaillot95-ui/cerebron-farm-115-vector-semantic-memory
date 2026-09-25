@@ -1,0 +1,136 @@
+{
+  "schema": "F115_RDX_HYBRID_RETRIEVAL_DEV_V1",
+  "status": "PASS",
+  "farm_id": 115,
+  "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+  "resolved_model_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "dev_query_count": 8,
+  "baseline_dense": {
+    "correct": 7,
+    "accuracy": 0.875,
+    "mrr": 0.9375
+  },
+  "best_policy": {
+    "dense_weight": 0.9,
+    "lexical_weight": 0.09999999999999998,
+    "correct": 8,
+    "accuracy": 1.0,
+    "mrr": 1.0
+  },
+  "dev_gain_over_dense_top1": 1,
+  "candidates": [
+    {
+      "dense_weight": 1.0,
+      "lexical_weight": 0.0,
+      "correct": 7,
+      "accuracy": 0.875,
+      "mrr": 0.9375
+    },
+    {
+      "dense_weight": 0.9,
+      "lexical_weight": 0.09999999999999998,
+      "correct": 8,
+      "accuracy": 1.0,
+      "mrr": 1.0
+    },
+    {
+      "dense_weight": 0.8,
+      "lexical_weight": 0.19999999999999996,
+      "correct": 8,
+      "accuracy": 1.0,
+      "mrr": 1.0
+    },
+    {
+      "dense_weight": 0.7,
+      "lexical_weight": 0.30000000000000004,
+      "correct": 8,
+      "accuracy": 1.0,
+      "mrr": 1.0
+    },
+    {
+      "dense_weight": 0.6,
+      "lexical_weight": 0.4,
+      "correct": 8,
+      "accuracy": 1.0,
+      "mrr": 1.0
+    },
+    {
+      "dense_weight": 0.5,
+      "lexical_weight": 0.5,
+      "correct": 8,
+      "accuracy": 1.0,
+      "mrr": 1.0
+    },
+    {
+      "dense_weight": 0.4,
+      "lexical_weight": 0.6,
+      "correct": 8,
+      "accuracy": 1.0,
+      "mrr": 1.0
+    }
+  ],
+  "best_rows": [
+    {
+      "query_sha256": "448c077aa0ccc4a14e4e3f209c8e365de1d62442d43589333e5958520e65d3b9",
+      "target": "RDX-AI-CLAIM-001",
+      "top1": "RDX-AI-CLAIM-001",
+      "target_rank": 1,
+      "top1_correct": true
+    },
+    {
+      "query_sha256": "caef436e5fed2bfe1d3a51f7ea2ba75347b4f18a61298f51c6f0b197531a2930",
+      "target": "RDX-AI-CLAIM-002",
+      "top1": "RDX-AI-CLAIM-002",
+      "target_rank": 1,
+      "top1_correct": true
+    },
+    {
+      "query_sha256": "c65da90f39a258279d07ee0287ecbcee388a182343a5ce17e4a0c958deb23765",
+      "target": "RDX-ROBOT-CLAIM-001",
+      "top1": "RDX-ROBOT-CLAIM-001",
+      "target_rank": 1,
+      "top1_correct": true
+    },
+    {
+      "query_sha256": "e1bc5555039b6be9c4ba23c1d8d014e0f70074f45acdfb2f0d099499930f8f9a",
+      "target": "RDX-MODEL-CLAIM-002",
+      "top1": "RDX-MODEL-CLAIM-002",
+      "target_rank": 1,
+      "top1_correct": true
+    },
+    {
+      "query_sha256": "3cdf74049b990413fe3aaf0f829246a2f92a762d92211de2307cba3643264816",
+      "target": "RDX-MODEL-CLAIM-001",
+      "top1": "RDX-MODEL-CLAIM-001",
+      "target_rank": 1,
+      "top1_correct": true
+    },
+    {
+      "query_sha256": "f34e051c43f98b48f2306889d58aa3c63df22e9d8ef38e725e615fc2bb5b5ee4",
+      "target": "RDX-EVID-CLAIM-001",
+      "top1": "RDX-EVID-CLAIM-001",
+      "target_rank": 1,
+      "top1_correct": true
+    },
+    {
+      "query_sha256": "d6cf46223a72b7f888735251f793eb8847b88ae579e2ae8dde416dda4ae90ff4",
+      "target": "RDX-S01-CLAIM-001",
+      "top1": "RDX-S01-CLAIM-001",
+      "target_rank": 1,
+      "top1_correct": true
+    },
+    {
+      "query_sha256": "d92ab22b653b42f86df4fb199674a0ffc9f13b831f751168cd8673438011135e",
+      "target": "RDX-ENERGY-CLAIM-002",
+      "top1": "RDX-ENERGY-CLAIM-002",
+      "target_rank": 1,
+      "top1_correct": true
+    }
+  ],
+  "decision": "CONTINUE_TO_FRESH_HOLDOUT",
+  "training_executed": false,
+  "weights_changed": false,
+  "claim_ceiling": "DEV_POLICY_SELECTION_ONLY_NO_PRODUCTION_RAG_GAIN_CLAIM_NO_HOLDOUT_CLAIM",
+  "elapsed_s": 2.595,
+  "receipt_sha256": "a5b40f6e97bcb2c176778e1841d03dfb639bc9c2e952ebc172b7df2f10a6bc24"
+}
