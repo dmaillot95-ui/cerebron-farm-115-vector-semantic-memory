@@ -1,0 +1,28 @@
+name: CEREBRON F115 RDX Semantic Recall Canary
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'config/rdx-semantic-recall-trigger.txt'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  semantic-recall:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install vector runtime
+        run: python -m pip install --quiet --no-cache-dir sentence-transformers huggingface_hub numpy
+      - name: Run RDX semantic recall canary
+        run: python worker/rdx_semantic_recall_canary.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: f115-rdx-semantic-recall-canary
+          path: artifacts/rdx_semantic_recall_canary.json
+          if-no-files-found: error
