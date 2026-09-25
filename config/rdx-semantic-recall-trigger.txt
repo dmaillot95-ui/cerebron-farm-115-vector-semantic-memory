@@ -1,0 +1,6 @@
+F115 RDX SEMANTIC RECALL CANARY V1
+source=RDX_SYNTHETIC_CANARY
+training=false
+weights_changed=false
+goal=MEASURE_TOP1_AND_MRR
+claim_ceiling=SYNTHETIC_SEMANTIC_RETRIEVAL_ONLY
