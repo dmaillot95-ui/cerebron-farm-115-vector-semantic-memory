@@ -1,0 +1,27 @@
+{
+  "schema": "F115_RDX_SEMANTIC_RECALL_STRESS_V2_POINTER",
+  "run_id": 36150611340,
+  "workflow_conclusion": "failure_persistence_only",
+  "scientific_step": "success",
+  "artifact": {
+    "artifact_id": 10870804406,
+    "name": "f115-rdx-semantic-recall-stress-v2",
+    "digest": "sha256:9ff3cbc5e3b6a7d29ba2290c938a0053671149fbd938562a1b7ce289f0a5eb93",
+    "expired": false
+  },
+  "result": {
+    "schema": "F115_RDX_SEMANTIC_RECALL_STRESS_V2",
+    "status": "PASS",
+    "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+    "resolved_model_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "corpus_count": 24,
+    "query_count": 24,
+    "top1_accuracy": 0.9166666666666666,
+    "top3_recall": 1.0,
+    "mrr": 0.9583333333333334,
+    "receipt_sha256": "7a635b974200178976852092546d58be10414bd94a6232698e3f43981991952f"
+  },
+  "training_executed": false,
+  "weights_changed": false,
+  "claim_ceiling": "PERSISTED_POINTER_TO_EXACT_GITHUB_ARTIFACT_FRESH_SYNTHETIC_STRESS_ONLY_NOT_PRODUCTION_RAG_QUALITY"
+}
