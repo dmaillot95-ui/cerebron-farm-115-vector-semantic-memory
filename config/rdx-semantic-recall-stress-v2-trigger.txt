@@ -1,0 +1,5 @@
+F115 RDX SEMANTIC RECALL STRESS V2
+dataset=fresh_synthetic_holdout
+queries=24
+production_claim=false
+training=false
